@@ -6,6 +6,8 @@ import ThemeRegistry from "@/theme/common/theme-registry";
 import AppTemplateHeader from "@/components/molecules/AppTemplateHeader";
 import { defaultOpenGraph } from "@/constants/metadata";
 
+import "@/styles/globals.scss";
+
 export const metadata: Metadata = {
   metadataBase: new URL(`${process.env.NEXT_PUBLIC_APP_BASE_URL}`),
   title: {

@@ -1,5 +1,4 @@
 import { Avatar, Box, Rating } from "@mui/material";
-import { useRouter } from "next/router";
 import { useQuery } from "@apollo/experimental-nextjs-app-support/ssr";
 
 import styles from "./style.module.scss";
@@ -15,8 +14,6 @@ interface BusinessReviewsProps {
 }
 
 const BusinessReviews = ({ business }: BusinessReviewsProps) => {
-  const router = useRouter();
-
   const { data, loading, error } = useQuery(GET_BUSINESS_REVIEWS_GQL, {
     fetchPolicy: "cache-first",
     variables: {

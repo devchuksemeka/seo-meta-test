@@ -1,6 +1,6 @@
 import { PropsWithChildren } from "react";
 import { Avatar, Link } from "@mui/material";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { useQuery } from "@apollo/experimental-nextjs-app-support/ssr";
 
 import styles from "./style.module.scss";

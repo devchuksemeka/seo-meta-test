@@ -55,11 +55,20 @@
       justify-content: space-between;
     }
     &__avatar {
-      width: 6rem;
-      height: 6rem;
+      width: 6rem !important;
+      height: 6rem !important;
       border: 2px solid color.$primary500;
 
-      margin-top: -3.75rem;
+      margin-top: -3.75rem !important;
+
+      @media (max-width: breakpoint.$breakpointMobileSmall) {
+        font-size: 1vw !important;
+        width: 16em !important;
+        height: 16em !important;
+        border: 2px solid color.$primary500;
+
+        margin-top: -3rem !important;
+      }
     }
 
     &__body {
