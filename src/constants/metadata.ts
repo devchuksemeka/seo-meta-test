@@ -4,7 +4,9 @@ export const defaultOpenGraph = {
     "Search any business, Get things done, stay focus on productive task",
   images: [
     {
-      url: "/vercel.svg",
+      url: "/thumb.png",
+      width: 800,
+      height: 600,
     },
   ],
   type: "website",

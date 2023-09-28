@@ -7,6 +7,7 @@ import AppTemplateHeader from "@/components/molecules/AppTemplateHeader";
 import { defaultOpenGraph } from "@/constants/metadata";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(`${process.env.NEXT_PUBLIC_APP_BASE_URL}`),
   title: {
     template: "%s | Carojon",
     default: "Carojon - Your place of convenience",

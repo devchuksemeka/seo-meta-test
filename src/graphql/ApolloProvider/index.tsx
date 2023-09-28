@@ -82,7 +82,7 @@ export function ApolloWrapper({ children }: ApolloWrapperProps) {
   return (
     <ApolloNextAppProvider
       makeClient={() => makeClient({ token: sessionData?.token })}
-      makeSuspenseCache={makeSuspenseCache}
+      // makeSuspenseCache={makeSuspenseCache}
     >
       {children}
     </ApolloNextAppProvider>
