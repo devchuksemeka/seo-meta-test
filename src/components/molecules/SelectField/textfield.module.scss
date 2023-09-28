@@ -1,0 +1,20 @@
+@use "@/styles/base/border.module.scss" as border;
+@use "@/styles/base/color.module.scss" as color;
+
+.wrapper {
+  // &control {
+
+  // }
+
+  // & input {
+  //   border: border.$formInputFieldBorder;
+  //   border-radius: border.$formInputFieldBorderRadius;
+  // }
+}
+
+// .select {
+//   &:hover {
+//     border-color: color.$primary500;
+//     box-shadow: 0 0 0 1px color.$primary500;
+//   }
+// }

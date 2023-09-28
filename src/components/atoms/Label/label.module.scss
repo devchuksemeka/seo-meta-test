@@ -1,0 +1,11 @@
+@use "@/styles/base/color.module.scss" as color;
+
+.label_default {
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  font-family: "roboto";
+  line-height: 18px;
+  text-transform: capitalize;
+  color: color.$primaryText;
+}

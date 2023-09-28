@@ -1,0 +1,8 @@
+@use "@/styles/base/border.module.scss" as border;
+
+.wrapper {
+  & input {
+    border: border.$formInputFieldBorder;
+    border-radius: border.$formInputFieldBorderRadius;
+  }
+}

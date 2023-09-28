@@ -1,0 +1,26 @@
+@import "@/styles/base/color.module.scss",
+  "@/styles/base/typography.module.scss";
+
+$buttonBorderRadius: 5px;
+$buttonPadding: 0.5rem 1rem;
+$defaultFontSize: 1rem;
+$buttonBoxShadow: 0px 0px 10px #00000040;
+
+@mixin full-width-input {
+  width: 100%;
+}
+
+@mixin inputBase {
+  padding: $buttonPadding;
+  font-size: $defaultFontSize;
+  border-radius: $buttonBorderRadius;
+  outline: none;
+}
+
+.input_fullwidth {
+  @include full-width-input;
+}
+
+.input_default {
+  @include inputBase;
+}

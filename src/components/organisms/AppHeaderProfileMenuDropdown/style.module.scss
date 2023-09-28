@@ -1,0 +1,35 @@
+@use "@/styles/base/color.module.scss" as color;
+
+.wrapper {
+  // border: 1px solid color.$divider;
+  // padding: 1rem;
+  // background: color.$appBackground;
+  // box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.25);
+
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+
+  // gap: 1rem;
+  // flex-direction: column;
+}
+
+.menu {
+  // & ul {
+  //   padding-top: 0;
+  //   padding-bottom: 0;
+  //   // display: flex;
+  //   // flex-direction: column;
+  // }
+  // & .MuiList-root {
+  //   display: flex;
+  // }
+  // & .MuiMenu-list {
+  //   padding-top: 0;
+  //   padding-bottom: 0;
+  // }
+}
+
+.avatar_menu_button {
+  padding: 0;
+}
