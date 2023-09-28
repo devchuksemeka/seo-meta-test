@@ -31,8 +31,6 @@ export async function generateMetadata(
   const descriptionValue = result?.description;
   const imageUrl = result?.image;
 
-  console.log({ name, descriptionValue, imageUrl });
-
   const title = name;
   const description =
     descriptionValue ??
