@@ -20,7 +20,11 @@ export async function generateMetadata(
 
   const { data } = await getClient().query({
     query: GET_BUSINESS_GQL,
-    fetchPolicy: "cache-first",
+    context: {
+      fetchOptions: {
+        next: { revalidate: 10 },
+      },
+    },
     variables: {
       id,
     },
