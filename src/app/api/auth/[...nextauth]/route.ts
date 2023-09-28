@@ -3,7 +3,7 @@ import GoogleProvider from "next-auth/providers/google";
 import jwt from "jsonwebtoken";
 import { JWT } from "next-auth/jwt";
 
-export const handler = NextAuth({
+const handler = NextAuth({
   callbacks: {
     async jwt(data) {
       const { token, account, profile, trigger } = data ?? {};
