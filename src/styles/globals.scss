@@ -1,0 +1,71 @@
+@import "@/styles/base/color.module.scss",
+  "@/styles/base/typography.module.scss";
+
+html {
+  // font-family: "open-sans", "inter";
+  font-family: "open-sans", "inter", "roboto";
+}
+
+body {
+  background-color: $appBackground;
+  object-fit: cover;
+  height: 100vh;
+}
+
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+a,
+a:active,
+a:visited {
+  text-decoration: none;
+  color: $primary500;
+}
+
+h1 {
+  font-size: $fontSizeTypographyH1;
+}
+
+h2 {
+  font-size: $fontSizeTypographyH2;
+}
+
+h3 {
+  font-size: $fontSizeTypographyH3;
+}
+
+h4 {
+  font-size: $fontSizeTypographyH4;
+}
+
+h5 {
+  font-size: $fontSizeTypographyH5;
+}
+
+h6 {
+  font-size: $fontSizeTypographyH6;
+}
+
+.header {
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 0px 10px #00000040;
+}
+
+button {
+  background-color: $primary500;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px #00000040;
+}

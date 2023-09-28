@@ -1,0 +1,35 @@
+@use "@/styles/base/color.module.scss" as color;
+
+.drawer_header {
+  border: 1px solid color.$divider;
+  padding: 0.5rem 1rem;
+  background: color.$appBackground;
+  box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.25);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 1rem;
+  // flex-direction: column;
+
+  &__mark_as_read_btn {
+    padding: 0.5rem;
+  }
+}
+
+.list_item {
+  &__button {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  &__text_box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.025rem;
+  }
+  &__not_read {
+    background-color: color.$grayscale200;
+  }
+}

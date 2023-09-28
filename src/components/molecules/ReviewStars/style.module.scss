@@ -1,0 +1,12 @@
+@use "@/styles/base/breakpoint.module.scss" as breakpoint;
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stars_group {
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,143 @@
+@import "@/styles/base/color.module.scss",
+  "@/styles/base/typography.module.scss";
+
+$buttonBorderRadius: 3px;
+$buttonDefaultFontSize: $fontSizeTypographyH4;
+$buttonBoxShadow: 0px 0px 10px #00000040;
+
+// Button Padding
+$buttonSmallestPadding: 0.5rem;
+$buttonSmallPadding: 0.5rem 1rem;
+$buttonMediumPadding: 1rem 2rem;
+$buttonLargePadding: 1rem 2.5rem;
+
+@mixin buttonBorder($btnColor) {
+  border: 1.55px solid currentcolor;
+}
+
+@mixin full-width-button {
+  width: 100%;
+}
+
+@mixin buttonCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin buttonBase {
+  @include buttonCenter;
+  cursor: pointer;
+  font-family: "Roboto";
+  border-radius: $buttonBorderRadius;
+  gap: 0.5rem;
+}
+
+@mixin containedButtonBase {
+  @include buttonBase;
+  color: $textIcon;
+  border: none;
+  box-shadow: $buttonBoxShadow;
+}
+
+@mixin outlinedButtonBase {
+  @include buttonBase;
+  background-color: transparent;
+}
+
+.button_fullwidth {
+  @include full-width-button;
+}
+
+.button_size {
+  &_smallest {
+    height: 18px;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 12px;
+    padding: $buttonSmallestPadding;
+    gap: 0.2rem;
+  }
+  &_small {
+    height: 28px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    padding: $buttonSmallPadding;
+  }
+  &_medium {
+    height: 38px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    padding: $buttonMediumPadding;
+  }
+  &_large {
+    height: 48px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    padding: $buttonLargePadding;
+  }
+}
+
+.button_color {
+  &_primary {
+    color: $primary500;
+  }
+  &_info {
+    color: $info500;
+  }
+  &_error {
+    color: $danger500;
+  }
+  &_warning {
+    color: $warning500;
+  }
+  &_success {
+    color: $success500;
+  }
+}
+
+.button_variant {
+  &_text {
+    @include buttonCenter;
+    cursor: pointer;
+    font-family: "Roboto";
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 1px;
+  }
+  &_outlined {
+    @include outlinedButtonBase;
+    @include buttonBorder("some-color");
+  }
+  &_contained {
+    @include containedButtonBase;
+    &_primary {
+      background-color: $primary500;
+    }
+    &_error {
+      background-color: $danger500;
+    }
+    &_warning {
+      background-color: $warning500;
+    }
+    &_info {
+      background-color: $info500;
+    }
+    &_success {
+      background-color: $success500;
+    }
+  }
+}
+
+.button_disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
