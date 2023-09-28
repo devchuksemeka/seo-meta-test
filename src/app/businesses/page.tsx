@@ -21,28 +21,27 @@ export async function generateMetadata(
   });
 
   const selectedLocation = data?.getLocationAreas?.find(
-    (location: any) => location.slug === location
+    (locationData: any) => locationData.slug === location
   );
 
   const selectedServiceType = data?.getServices?.find(
     (service: any) => service.slug === serviceType
   );
 
-  if (selectedServiceType?.name && selectedLocation?.name) {
-    const title = `${selectedServiceType.name} Businesses @ ${selectedLocation.name}`;
-    const description = `Looking for the best ${selectedServiceType.name} business at location ${selectedLocation.name}. Search no further, relax and make a pick from the list you find here`;
-    return {
+  const serviceName = selectedServiceType?.name;
+  const locationName = selectedLocation?.name;
+
+  const title = `${serviceName} Businesses @ ${locationName}`;
+  const description = `Looking for the best ${serviceName} business at location ${locationName}. Search no further, relax and make a pick from the list you find here`;
+  return {
+    title,
+    description,
+    openGraph: {
+      ...defaultOpenGraph,
       title,
       description,
-      openGraph: {
-        ...defaultOpenGraph,
-        title,
-        description,
-      },
-    };
-  }
-
-  return {};
+    },
+  };
 }
 
 export default function BusinessList() {
