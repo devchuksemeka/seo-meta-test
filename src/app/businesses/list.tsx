@@ -41,9 +41,9 @@ export default function BusinessSearchList() {
   const onSearchSubmit = ({ serviceType, location }: any) => {
     const { value: serviceTypeValue } = serviceType;
     const { value: locationValue } = location;
-    // router.replace({
-    //   query: { serviceType: serviceTypeValue, location: locationValue },
-    // });
+    router.replace(
+      `/businesses?serviceType=${serviceTypeValue}&location=${locationValue}`
+    );
   };
 
   return (
